@@ -1,18 +1,15 @@
-let http = require("http")
+const http = require('http');
 
-let ourApp = http.createServer(function(req, res){
-    if (req.url == "/") {
-        res.end("Hello, and welcome to our website.")
-    }
+const server = http.createServer((req, res) => {
+  if (req.url === '/about') {
+    res.end('About page');
+    return;  // stop here to avoid running rest of the handler
+  }
+  
+  // Other routes
+  res.end('Default response');
+});
 
-    if (req.url == "/about") {
-        res.end("Thank you for the interest in our company.")
-    }  
-
-    res.end("We cannot find the page that you are looking for.")
-})
-ourApp.listen(3000)
-
-
+server.listen(3000, () => console.log('Server running on port 3000'));
 
 
