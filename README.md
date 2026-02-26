@@ -35,9 +35,6 @@ Bash
 node index.js
 (Assuming your file is named index.js)
 
-3. View the App
-Open your browser and navigate to:
-http://localhost:3000
 
 📝 Key Code Concepts
 Middleware: ourApp.use(express.urlencoded({extended: false})) is crucial. Without this, the server wouldn't be able to "read" what you typed in the input box.
