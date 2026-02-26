@@ -40,5 +40,3 @@ node index.js
 Middleware: ourApp.use(express.urlencoded({extended: false})) is crucial. Without this, the server wouldn't be able to "read" what you typed in the input box.
 
 Statelessness: Notice how the server doesn't "remember" who you are. Every time you submit the form, it's a fresh interaction.
-
-Port 3000: The ourApp.listen(3000) line tells the computer to open a specific "door" for web traffic to come through.
